@@ -3,11 +3,11 @@
     <!-- <mat-icon>language</mat-icon> -->
     <span class="nav-caption">Main</span>
   </a>
-  <a mat-list-item routerLink="/signup" (click)="onClose()">
+  <a *ngIf="!isAuth" mat-list-item routerLink="/signup" (click)="onClose()">
     <mat-icon>person_add</mat-icon>
     <span class="nav-caption">Signup</span>
   </a>
-  <a mat-list-item routerLink="/login" (click)="onClose()">
+  <a *ngIf="!isAuth" mat-list-item routerLink="/login" (click)="onClose()">
     <mat-icon>person</mat-icon>
     <span class="nav-caption">Login</span>
   </a>
@@ -15,7 +15,7 @@
     <mat-icon>fitness_center</mat-icon>
     <span class="nav-caption">Training</span>
   </a>
-  <a mat-list-item routerLink="/login" (click)="onClose()">
+  <a *ngIf="isAuth" mat-list-item (click)="onClose()">
     <mat-icon>exit_to_app</mat-icon>
     <span class="nav-caption">Logout</span>
   </a>
