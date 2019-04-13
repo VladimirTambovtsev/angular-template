@@ -1,0 +1,15 @@
+h1,
+p {
+  padding: 10px;
+  font-weight: 100;
+}
+
+section {
+  /* text-align: center; */
+  min-width: 220px;
+  width: 55%;
+}
+
+.welcome {
+  margin-top: 20px;
+}
